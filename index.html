@@ -1,12 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bloomix</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- style link -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="picture/logo.jpg" alt="Bloomix logo" width="40" height="40" class="d-inline-block align-text-top">
+          </a>
+
+          <!-- Toggle button for mobile -->
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar content -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="speaker.html">Speaker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Headphone</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PowerBank</a>
+              </li>
+            </ul>
+
+            <!-- Search form -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Carousel -->
+      <div id="carouselExampleRide" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-7">
+                <h1 class="display-6 mb-2">Power Your Device</h1>
+                <p class="lead">We provide high-quality power solutions for your devices.</p>
+                <h2 class="fw-bold text-success"> Click for more</h2>
+                <button class="btn btn-primary btn-lg mt-3" href="#">Shop Now</button>
+              </div>
+              <div class="col-md-5">
+                <img src="picture/p1.JPG" alt="Product photo 1" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-md-7">
+                <h1 class="display-6 mb-2">Enjoy your music</h1>
+                <p class="lead">Experience high-quality sound with our audio products.</p>
+                 <h2 class="fw-bold text-success"> Click for more</h2>
+                <button class="btn btn-primary btn-lg mt-3" href="#">Shop Now</button>
+              </div>
+              <div class="col-md-5">
+                <img src="picture/p2.JPG" alt="Product photo 2" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-md-7">
+                <h1 class="display-6 mb-2">Boost Your Music Experience</h1>
+                <p class="lead">Immerse yourself in rich, high-fidelity sound.</p>
+                 <h2 class="fw-bold text-success"> Click for more</h2>
+                <button class="btn btn-primary btn-lg mt-3" href="#">Shop Now</button>
+              </div>
+              <div class="col-md-5">
+                <img src="picture/p3.JPG" alt="Product photo 3" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- (Optional) Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+      <!-- /Carousel -->
+       
+      <div class="container categories py-4">
+  <div class="row text-center">
     
-</body>
+    <!-- Headphone -->
+    <div class="col-md-4 mb-4">
+      <div class="d-flex flex-column align-items-center">
+        <h2>HeadPhone</h2>
+        <img src="picture/headphone.jpg" alt="HeadPhone" class="img-fluid mt-3">
+      </div>
+    </div>
+
+    <!-- Speaker -->
+    <div class="col-md-4 mb-4">
+      <div class="d-flex flex-column align-items-center">
+        <h2>Speaker</h2>
+        <button type="button" class="btn p-0 border-0 bg-transparent mt-3" onclick="location.href='speaker.html'" aria-label="View speaker products">
+          <img src="picture/Speaker.jpg" alt="Black portable Bluetooth speaker angled to show front grille and controls on a white studio background; neutral commercial tone" class="img-fluid">
+        </button>
+      </div>
+    </div>
+
+    <!-- PowerBank -->
+    <div class="col-md-4 mb-4">
+      <div class="d-flex flex-column align-items-center">
+        <h2>PowerBank</h2>
+        <img src="picture/PowerBank.jpg" alt="PowerBank" class="img-fluid mt-3">
+      </div>
+    </div>
+
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Bloomix</h3>
+      <p>Your one-stop shop for high-quality gadgets and accessories.  
+      Discover innovation, style, and performance in every product.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> bloomix555@gmail.com</p>
+      <p><strong>Phone:</strong> 01940341516 (WhatsApp)</p>
+      <p><strong>Address:</strong> Kborshtan,Emnertag,Uttara-10,Dhaka</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <strong>Bloomix</strong>. All rights reserved. | Designed with ❤️ by Ishtiyak Ahmed Plabon</p>
+  </div>
+</footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
